@@ -1,4 +1,10 @@
 class ArticlesController < ApplicationController
+  
+  def index
+    
+    @articles = Article.all
+  end
+  
   def new
     @article = Article.new
     
@@ -20,9 +26,29 @@ class ArticlesController < ApplicationController
     
   end
   
-  def show
-    @article = Article.find(params[:id])
   
+  def edit
+    @article = Article.find_by(id: params[:id])
+  end
+  
+  def updated
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      flash[:notice] = "Updated"
+      redirect_to article_path(@article)
+    else
+      render 'edit'
+    end
+  
+  end
+  
+  
+  def show
+    @article = Article.find_by(id: params[:id])
+    # if @article.errors.any?
+    #   redirect_to home_path
+    # end
+    
   end
   
   

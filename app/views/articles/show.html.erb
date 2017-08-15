@@ -1,3 +1,10 @@
+<% if @article == nil %>
+<h1>Item does not exist</h1>
+<% else %>
 <h1>Showing selected items</h1>
 <p>Title: <%= @article.title %></p>
 <p>Description: <%= @article.description %></p>
+
+<% end %>
+<%= link_to "Edit this article", edit_article_path(@article) %>
+<%= link_to "Back to articles listing", articles_path %>

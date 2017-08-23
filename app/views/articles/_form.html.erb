@@ -1,4 +1,3 @@
-<h1>Editing an existing article</h1>
 <% if @article.errors.any? %>
 <h2>Following errors</h2>
 <ul>
@@ -11,7 +10,7 @@
 
 
 <% end %>
-<%= form_for @article do |f| %>
+<%= form_for :article do |f| %>
   <p>
     <%= f.label :title %> <br/>
     <%= f.text_field :title %>

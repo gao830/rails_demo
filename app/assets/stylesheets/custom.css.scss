@@ -17,6 +17,21 @@ $navbar-default-bg: black;
   text-decoration: none;
 }
 
+
+// .well h4{
+//   color: #999;
+// }
+
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  
+}
+
+.description {
+  margin-top: 0;
+}
+
 .center {
   text-align: center;
 }
@@ -63,7 +78,29 @@ $navbar-default-bg: black;
   margin-left: 15px;
 }
 
+.nonexist {
+  
+  margin-top: 50px;  
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #f2dede;
+  font-size: 1.1em;
+}
+
+
 .panel-body {
   background-color: #f2dede;
   color: #a94442;
+}
+
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 18px;
+  padding-bottom: 16px;
 }
